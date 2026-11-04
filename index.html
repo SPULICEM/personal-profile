@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="color-scheme" content="dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sérgio Mantovani Paiva Pulice – Energy transitions, climate governance and disaster preparedness</title>
+<title>Sergio Pulice profile</title>
 <meta name="description" content="Postdoctoral researcher at Cemaden studying energy transitions, climate policy, water governance and disaster preparedness using network and discourse analysis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,16 +20,16 @@
   padding-bottom:env(safe-area-inset-bottom,0px);
   color-scheme:dark;
 }
-html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+html{height:100%;font-size:94%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.125rem;line-height:1.5;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
 a{color:var(--accent);text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:3px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
 h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.1;margin:0;letter-spacing:-.015em}
-h2{font-size:clamp(1.7rem,3.4vw,2.35rem);margin-bottom:.25rem}
+h2{font-size:clamp(1.5rem,2.9vw,2.05rem);margin-bottom:.25rem}
 h3{font-size:1.2rem;font-weight:500;letter-spacing:0}
 .lede{color:var(--muted);max-width:60ch;margin:0 0 1.2rem}
 section{padding:clamp(1.6rem,3.5vw,2.6rem) 0;border-top:1px solid var(--line)}
@@ -47,10 +47,10 @@ nav a:hover{color:var(--ink)}
 
 /* hero */
 .hero{border-top:0;padding-top:clamp(1.2rem,3vw,2rem)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.22fr);gap:clamp(1.2rem,3vw,2.4rem);align-items:center}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
 .who{display:flex;gap:1.6rem;align-items:stretch;margin-bottom:1.1rem}
-.who h1{font-size:clamp(1.8rem,2.9vw,2.4rem);margin-bottom:.9rem}
+.who h1{font-size:clamp(1.8rem,2.7vw,2.3rem);margin-bottom:.9rem}
 .who-text{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:.8rem}
 .who h1{margin:0}
 .who p{line-height:1.35}
@@ -74,6 +74,7 @@ html[data-audience="both"] .swap>p{margin:0 0 .7rem}
 
 /* network */
 .net{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:.8rem .8rem 1rem}
+.net-title{margin:.15rem .7rem .2rem;font:500 .82rem var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .net svg{width:100%;height:auto;display:block}
 .net .edge{stroke:var(--line);stroke-width:2;transition:stroke .2s,stroke-width .2s}
 .net .edge.on{stroke:var(--signal);stroke-width:3}
@@ -100,7 +101,9 @@ html[data-audience="both"] .swap>p{margin:0 0 .7rem}
 .net-cta{display:flex;justify-content:center;margin-top:.9rem}
 /* themes */
 .grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.themes{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.themes{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.themes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.themes{grid-template-columns:1fr}}
 .cell{background:var(--surface);padding:1.1rem 1.2rem 1.2rem}
 .cell:target{box-shadow:inset 0 0 0 2px var(--signal)}
 .cell h3{margin-bottom:.6rem}
@@ -119,9 +122,6 @@ html[data-audience="both"] .swap>p{margin:0 0 .7rem}
 @media (max-width:700px){.proj{grid-template-columns:1fr}}
 
 /* publications */
-.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
-.filters button{font:500 .9rem var(--display);border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:.4rem .9rem;border-radius:999px;cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .pubs{list-style:none;margin:0;padding:0}
 .pubs li{display:grid;grid-template-columns:64px 1fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
 .pubs li:first-child{border-top:1px solid var(--line)}
@@ -143,6 +143,14 @@ html[data-audience="both"] .swap>p{margin:0 0 .7rem}
 
 /* beyond academia */
 .cols{display:grid;gap:1.4rem 3rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.sub{font-size:1.1rem;font-weight:500;margin:1.1rem 0 .6rem}
+.now-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));margin-bottom:.4rem}
+.now{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:1rem 1.2rem 1.1rem}
+.now .when{display:inline-block;font:700 .78rem var(--display);color:var(--on-accent);background:var(--accent);border-radius:999px;padding:.1rem .65rem;margin-bottom:.55rem}
+.now b{display:block;font:500 1.2rem var(--display);color:var(--ink)}
+.now .txt{display:block;margin-top:.3rem;color:var(--muted);font-size:1rem;line-height:1.45}
+.edu{max-width:84ch;color:var(--muted);margin:0 0 1.4rem;font-size:1.05rem}
+.edu b{color:var(--ink);font-weight:500}
 .cols h3{margin-bottom:.7rem}
 .cols ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:1.03rem}
 .cols li{margin-bottom:.55rem}
@@ -170,9 +178,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
   <div class="wrap">
     <a class="brand" href="#top">Sérgio Pulice</a>
     <nav aria-label="Sections">
+      <a href="#research">Areas of interest</a>
       <a href="#background">Background</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
+      <a href="#projects">Active projects</a>
       <a href="#publications">Publications</a>
       <a href="#beyond">Beyond academia</a>
       <a href="#contact">Contact</a>
@@ -208,7 +216,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
 
     <div class="net-col">
     <div class="net" aria-label="Map of research themes linked by network science">
-      <svg id="graph" viewBox="-90 0 910 500" role="group" aria-label="Network linking research themes and methods. Each node links to the research themes section.">
+      <p class="net-title">Main areas of interest</p>
+      <svg id="graph" viewBox="-74 2 886 504" role="group" aria-label="Network linking research themes and methods. Each node links to the main areas of interest.">
         <g id="edges"></g>
         <g id="nodes"></g>
       </svg>
@@ -218,19 +227,71 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
   </div>
 </section>
 
+<section id="research">
+  <div class="wrap">
+    <h2>Main areas of interest</h2>
+    <p class="lede">Interdisciplinary research bridging environmental and policy process and policy analysis sciences.</p>
+    <div class="grid themes">
+      <div class="cell" id="research-energy">
+        <h3>Transition to sustainability</h3>
+        <div class="swap">
+        <p class="plain">How power relations and asymmetries shape sociotechnical development, particularly in the Global South context.</p>
+        <p class="tech">Technological legitimacy, power coalitions and discourse lock-in in Brazil’s wind energy transition, studied through discourse network analysis.</p>
+      </div>
+      </div>
+      <div class="cell" id="research-policy">
+        <h3>Climate policy and governance</h3>
+        <div class="swap">
+        <p class="plain">How coalitions and decision-maker actors inform the policy process from a network perspective in the context of the climate crisis.</p>
+        <p class="tech">Climate policy networks to examine collaborations, information exchange and influence in the Brazilian climate context.</p>
+      </div>
+      </div>
+      <div class="cell" id="research-water">
+        <h3>Water, food and energy</h3>
+        <div class="swap">
+        <p class="plain">How the interconnected dimensions can be understood by policymakers.</p>
+        <p class="tech">Water–energy–food nexus, collaborative sustainability indices aligned with the 2030 Agenda, and actor networks in socio-ecological water governance.</p>
+      </div>
+      </div>
+      <div class="cell" id="research-disaster">
+        <h3>Disaster risk reduction</h3>
+        <div class="swap">
+        <p class="plain">Helping local governments and communities develop better processes for the prevention of floods, droughts and other extreme weather, with warnings built centred on people.</p>
+        <p class="tech">Organisational preparedness capacities for extreme weather and climate events, using mixed-methods action research.</p>
+      </div>
+      </div>
+      <div class="cell" id="research-cities">
+        <h3>Resilient cities</h3>
+        <div class="swap">
+        <p class="plain">Practical ways for cities to cut emissions and protect people and infrastructure from climate impacts, as well as improving governance capacity toward a more resilient urban state.</p>
+        <p class="tech">Urban decarbonisation, climate resilience and public-policy capacity within the CCD Carbon Neutral Cities centre.</p>
+      </div>
+      </div>
+      <div class="cell" id="research-hydro">
+        <h3>Measuring socioeconomic impacts from territorial interventions</h3>
+        <div class="swap">
+        <p class="plain">Assessing impact through the application of quantitative analysis in infrastructure projects.</p>
+        <p class="tech">Municipal human development, financial compensation and benefit-sharing mechanisms in the impact assessment of Brazilian hydropower.</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="background">
   <div class="wrap">
     <h2>Background</h2>
-    <p class="lede">Training in environmental management, environmental science and Earth system science.</p>
+    <p class="lede">Current positions and academic training.</p>
 
-    <ul class="tl">
-      <li><span class="when">2026 – present</span><div><b>Visiting researcher</b><span>Edinburgh Napier University, Scotland. “Advanced Analysis on Networks and Governance Structures for Smart, Resilient, and Sustainable Cities” (FAPESP grant 26/12936-0)</span></div></li>
-      <li><span class="when">2026 – present</span><div><b>Visiting researcher</b><span>Instituto de Pesquisas Tecnológicas do Estado de São Paulo (IPT)</span></div></li>
-      <li><span class="when">2025 – present</span><div><b>Postdoctoral researcher</b><span>Cemaden, funded by FAPESP. “Arranjos de governança para cidades inteligentes, resilientes e sustentáveis: subsídios a partir das análises de discursos e de redes” (FAPESP grant 25/13377-2).</span></div></li>
-      <li><span class="when">2020 – 2025</span><div><b>PhD in Earth System Science</b><span>INPE, funded by CAPES. Supervisor: Victor Marchezini; co-supervisor: Drielli Peyerl. Technological legitimacy of wind energy, studied with discourse network analysis.</span></div></li>
-      <li><span class="when">2014 – 2016</span><div><b>MSc in Environmental Science</b><span>Institute of Energy and Environment, University of São Paulo. Supervisor: Evandro Mateus Moretto.</span></div></li>
-      <li><span class="when">2007 – 2011</span><div><b>BSc in Environmental Management</b><span>School of Arts, Sciences and Humanities, University of São Paulo. Focus on ecological economics and water resources.</span></div></li>
-    </ul>
+    <h3 class="sub">Current positions</h3>
+      <div class="now-grid">
+        <div class="now"><span class="when">2026 – present</span><b>Visiting researcher</b><span class="txt">Edinburgh Napier University, Scotland. “Advanced Analysis on Networks and Governance Structures for Smart, Resilient, and Sustainable Cities” (FAPESP grant 26/12936-0)</span></div>
+        <div class="now"><span class="when">2026 – present</span><b>Visiting researcher</b><span class="txt">Instituto de Pesquisas Tecnológicas do Estado de São Paulo (IPT)</span></div>
+        <div class="now"><span class="when">2025 – present</span><b>Postdoctoral researcher</b><span class="txt">Cemaden, funded by FAPESP. “Arranjos de governança para cidades inteligentes, resilientes e sustentáveis: subsídios a partir das análises de discursos e de redes” (FAPESP grant 25/13377-2).</span></div>
+      </div>
+
+      <h3 class="sub">Education</h3>
+      <p class="edu"><b>PhD in Earth System Science</b>, INPE (2020–2025), funded by CAPES; supervisor Victor Marchezini, co-supervisor Drielli Peyerl; thesis on the technological legitimacy of wind energy, studied with discourse network analysis. <b>MSc in Environmental Science</b>, Institute of Energy and Environment, University of São Paulo (2014–2016); supervisor Evandro Mateus Moretto. <b>BSc in Environmental Management</b>, School of Arts, Sciences and Humanities, University of São Paulo (2007–2011), with a focus on ecological economics and water resources.</p>
 
     <div class="cols">
       <div>
@@ -245,67 +306,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
   </div>
 </section>
 
-<section id="research">
-  <div class="wrap">
-    <h2>Research themes</h2>
-    <p class="lede">Interdisciplinary research bridging environmental and policy process and policy analysis sciences.</p>
-    <div class="grid themes">
-      <div class="cell" id="research-energy">
-        <h3>Transition to sustainability</h3>
-        <div class="swap">
-        <p class="plain">Why and how some energy technologies, like wind power in Brazil, gain public and political backing, and who benefits when they do.</p>
-        <p class="tech">Technological legitimacy, power coalitions and discourse lock-in in Brazil’s wind energy transition, studied through discourse network analysis.</p>
-      </div>
-        <span class="tag">Wind energy</span>
-      </div>
-      <div class="cell" id="research-policy">
-        <h3>Climate policy and governance</h3>
-        <div class="swap">
-        <p class="plain">Who works with whom on climate action, and how the coalitions may inform the policy process from a network perspective.</p>
-        <p class="tech">Climate policy networks to examine collaborations, information exchange and influence in the Brazilian climate context.</p>
-      </div>
-        <span class="tag">Policy networks</span>
-      </div>
-      <div class="cell" id="research-water">
-        <h3>Water, food and energy</h3>
-        <div class="swap">
-        <p class="plain">How farming, power generation and rivers compete for the same land and water in the Cerrado, the Caatinga and the Paraíba do Sul basin.</p>
-        <p class="tech">Water–energy–food nexus, collaborative sustainability indices aligned with the 2030 Agenda, and actor networks in socio-ecological water governance.</p>
-      </div>
-        <span class="tag">Nexus</span>
-      </div>
-      <div class="cell" id="research-disaster">
-        <h3>Disaster risk reduction</h3>
-        <div class="swap">
-        <p class="plain">Helping local governments and communities get ready for floods, droughts and other extreme weather, with warnings built around people.</p>
-        <p class="tech">Organisational preparedness capacities for extreme weather and climate events, using mixed-methods action research.</p>
-      </div>
-        <span class="tag">Early warning</span>
-      </div>
-      <div class="cell" id="research-cities">
-        <h3>Resilient cities</h3>
-        <div class="swap">
-        <p class="plain">Practical ways for cities to cut emissions and protect people and infrastructure from climate impacts, as well as improving governance capacity toward a more resilient urban state.</p>
-        <p class="tech">Urban decarbonisation, climate resilience and public-policy capacity within the CCD Carbon Neutral Cities centre.</p>
-      </div>
-        <span class="tag">Carbon-neutral cities</span>
-      </div>
-      <div class="cell" id="research-hydro">
-        <h3>Hydropower and local development</h3>
-        <div class="swap">
-        <p class="plain">Whether big dams actually improve life in the towns nearby, and how the benefits can be shared more fairly.</p>
-        <p class="tech">Municipal human development, financial compensation and benefit-sharing mechanisms in the impact assessment of Brazilian hydropower.</p>
-      </div>
-        <span class="tag">Earlier work</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="projects">
   <div class="wrap">
-    <h2>Projects</h2>
-    <p class="lede">Current and recent research, from disaster to conservation governance.</p>
+    <h2>Active projects</h2>
+    <p class="lede">Current research, from disaster to conservation governance.</p>
 
     <div class="proj">
       <div class="when">2025 – present</div>
@@ -333,35 +338,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
         <p class="plink"><a href="https://www.ccst.inpe.br/bridgingvalues/" rel="noopener">Project website (INPE)</a></p>
       </div>
     </div>
-    <div class="proj">
-      <div class="when">2018 – 2024</div>
-      <div>
-        <h3>Sustainability transition and the water–agriculture–energy nexus</h3>
-        <p>Participatory scenarios and sustainability indicators for the Cerrado and Caatinga, the two biomes with most of Brazil’s remaining land for agricultural expansion and strong solar and wind potential.</p>
-      </div>
-    </div>
-    <div class="proj">
-      <div class="when">2018 – 2022</div>
-      <div>
-        <h3>Water resources in the Paraíba do Sul basin</h3>
-        <p>An integrated view of the basin’s adaptive capacity, combining biophysical modelling with water governance and social participation.</p>
-      </div>
-    </div>
-    <div class="proj">
-      <div class="when">2017 – 2022</div>
-      <div>
-        <h3>COMPON: Comparing Climate Change Policy Networks</h3>
-        <p>An international project explaining why societies and governments respond so differently to the need to cut greenhouse gas emissions.</p>
-        <p class="plink"><a href="https://www.compon.org/" rel="noopener">Project website (compon.org)</a></p>
-      </div>
-    </div>
-    <div class="proj">
-      <div class="when">2015 – 2019</div>
-      <div>
-        <h3>ANPPEA: national network for environmental education policy</h3>
-        <p>Strengthens public policies for environmental education in Brazilian municipalities, maps existing initiatives and builds indicators to monitor their impact.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -369,16 +345,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
   <div class="wrap">
     <h2>Publications</h2>
     <p class="lede">Journal articles, books, book chapters and academic theses, newest first. Citation counts come from the Lattes CV (Scopus and Web of Science).</p>
-
-    <div class="filters" role="group" aria-label="Filter publications by theme">
-      <button type="button" data-f="all" aria-pressed="true">All</button>
-      <button type="button" data-f="energy" aria-pressed="false">Transition and cities</button>
-      <button type="button" data-f="water" aria-pressed="false">Water and food</button>
-      <button type="button" data-f="hydro" aria-pressed="false">Hydropower and development</button>
-      <button type="button" data-f="disaster" aria-pressed="false">Disaster risk reduction</button>
-      <button type="button" data-f="chapter" aria-pressed="false">Books and chapters</button>
-      <button type="button" data-f="thesis" aria-pressed="false">Theses</button>
-    </div>
 
     <ol class="pubs" id="pubs" reversed style="list-style:none">
       <li data-t="energy"><span class="yr">2026</span><div><div class="t">Legitimizing wind energy in Brazil: power coalitions, discourse lock-in and transition dynamics</div><div class="m"><strong>Pulice, S. M. P.</strong>, Peyerl, D., Demange, L. H. M. L., Martinez, L., Marchezini, V. <em>Environmental Sociology</em>, 1–29.</div><div class="doi"><a href="https://doi.org/10.1080/23251042.2026.2626624" rel="noopener">doi:10.1080/23251042.2026.2626624</a></div></div></li>
@@ -481,16 +447,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
     },25000);
   }
 
-  // Publication filter
-  var fb=document.querySelectorAll('.filters button'),items=document.querySelectorAll('#pubs li');
-  fb.forEach(function(b){
-    b.addEventListener('click',function(){
-      fb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-      var f=b.dataset.f,kindOnly=(f==='chapter'||f==='thesis');
-      items.forEach(function(li){li.hidden=!(f==='all'||li.dataset.t===f||li.dataset.k===f||(!kindOnly&&li.dataset.t==='all'))});
-    });
-  });
-
   // Network graph: every node links to the research themes
   var NS='http://www.w3.org/2000/svg';
   var N={
@@ -502,7 +458,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
     water:   {l:['Water, food','and energy'],            href:'#research-water'},
     net:     {l:['Network','science'],               href:'#research', method:1, r:15},
     ind:     {l:['Indicators'],                      href:'#research', method:1, r:15},
-    sea:     {l:['Socioenvironmental','analysis'],   href:'#research', method:1, r:19}
+    sea:     {l:['Socio-environmental','analysis'],   href:'#research', method:1, r:19}
   };
   var pairs=[
     ['net','policy'],['net','cities'],['net','energy'],
@@ -613,7 +569,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-be
   }
   keys.forEach(function(k){
     var n=N[k],name=n.l.join(' ').replace(' &','');
-    var g=mk('a',{'class':'node'+(n.method?' method':''),href:n.href,'aria-label':name+', go to research themes'});
+    var g=mk('a',{'class':'node'+(n.method?' method':''),href:n.href,'aria-label':name+', go to main areas of interest'});
     g.appendChild(mk('circle',{'class':'hit',cx:n.x,cy:n.y,r:38}));
     g.appendChild(mk('circle',{cx:n.x,cy:n.y,r:n.r||13}));
     var two=n.l.length>1,lh='1.15em',r=(n.r||13)+11;
