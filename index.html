@@ -156,6 +156,11 @@ html[data-audience="both"] .swap>p{margin:0 0 12px}
 
 /* publications */
 .pubs{list-style:none;margin:0;padding:0}
+.pubs-scroll{position:relative;max-height:560px;overflow-y:auto;overscroll-behavior:auto;padding-right:14px;scrollbar-width:thin;scrollbar-color:var(--preto) var(--branco)}
+.pubs-scroll::-webkit-scrollbar{width:10px}
+.pubs-scroll::-webkit-scrollbar-track{background:var(--branco)}
+.pubs-scroll::-webkit-scrollbar-thumb{background:var(--preto)}
+.pubs-hint{margin:10px 0 0;font:700 12px/16px var(--sans);letter-spacing:.04em;text-transform:uppercase}
 .pubs li{display:grid;grid-template-columns:72px 1fr;gap:0 14px;padding:10px 0;border-top:1px solid var(--preto)}
 .pubs li:last-child{border-bottom:1px solid var(--preto)}
 .pubs .yr{font:700 20px/26px var(--display)}
@@ -357,6 +362,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-betw
     <h2>Publications</h2>
     <p class="lede">Journal articles, books, book chapters and academic theses, newest first. Citation counts come from the Lattes CV (Scopus and Web of Science).</p>
 
+    <div class="pubs-scroll" id="pubsScroll" tabindex="0" role="region" aria-label="Publications list, scrollable">
     <ol class="pubs" id="pubs" reversed style="list-style:none">
       <li data-t="energy"><span class="yr">2026</span><div><div class="t"><span class="kind">Article</span>Legitimizing wind energy in Brazil: power coalitions, discourse lock-in and transition dynamics</div><div class="m"><strong>Pulice, S. M. P.</strong>, Peyerl, D., Demange, L. H. M. L., Martinez, L., Marchezini, V. <em>Environmental Sociology</em>, 1–29.</div><div class="doi"><a href="https://doi.org/10.1080/23251042.2026.2626624" rel="noopener">doi:10.1080/23251042.2026.2626624</a></div></div></li>
       <li data-t="energy"><span class="yr">2026</span><div><div class="t"><span class="kind">Article</span>Transformative state capacity and governance arrangements for smart, resilient, and decarbonized cities</div><div class="m"><strong>Pulice, S. M. P.</strong>, Marchezini, V., Branco, E. A., Guimarães, C. C. <em>Visioni LatinoAmericane</em>, 35, 145–164.</div><div class="doi"><a href="https://www.openstarts.units.it/handle/10077/38725" rel="noopener">Open access record (OpenstartS)</a></div></div></li>
@@ -376,6 +382,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-betw
       <li data-t="hydro" data-k="thesis"><span class="yr">2016</span><div><div class="t"><span class="kind">Master’s dissertation</span>A compensação financeira e o desenvolvimento de municípios brasileiros alagados por usinas hidrelétricas</div><div class="m"><strong>Pulice, S. M. P.</strong> MSc in Environmental Science, Institute of Energy and Environment, University of São Paulo. Supervisor: E. M. Moretto.</div><div class="c"><a href="https://teses.usp.br/teses/disponiveis/106/106132/tde-02022017-170958/publico/Pulice_2016.pdf" rel="noopener">Full text (USP theses repository)</a></div></div></li>
       <li data-t="other"><span class="yr">2009</span><div><div class="t"><span class="kind">Article</span>Uma experiência de coleta seletiva em condomínios residenciais</div><div class="m"><strong>Pulice, S. M. P.</strong>, Infante-Malachias, M. E., Barbosa, E. P., Valdiones, A. P. G., Talon, G. C., Codima, B. A. <em>Revista de Cultura e Extensão USP</em>, 2, 7–12.</div><div class="doi"><a href="https://doi.org/10.11606/issn.2316-9060.v2i0p7-12" rel="noopener">doi:10.11606/issn.2316-9060.v2i0p7-12</a></div></div></li>
     </ol>
+    </div>
+    <p class="pubs-hint" id="pubsHint"></p>
 
     <dl class="metrics">
       <div><dt>Scopus</dt><dd>9 documents<small>71 citations, March 2026</small></dd></div>
@@ -393,9 +401,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-betw
       <div>
         <h3>Policy and practice</h3>
         <ul>
-          <li><b>Technical note</b> responding to the public consultation on climate-risk, mitigation and adaptation indicators for the energy sector, led by the Energy Research Company (EPE) with WayCarbon (2022).</li>
+          <li><b><a href="http://mtc-m21d.sid.inpe.br/col/sid.inpe.br/mtc-m21d/2022/08.17.10.42/doc/publicacao.pdf?metadatarepository=sid.inpe.br/mtc-m21d/2022/08.17.10.42.49&amp;mirror=urlib.net/www/2021/06.04.03.40.25&amp;languagebutton=pt-BR" rel="noopener">Technical note</a></b> responding to the public consultation on climate-risk, mitigation and adaptation indicators for the energy sector, led by the Energy Research Company (EPE) with WayCarbon (2022).</li>
           <li><b>Environmental perception survey</b> of residents of the São Paulo stretch of the Paraíba do Sul basin (2020).</li>
-          <li><b>Final scientific report</b> of BridgingVALUES / Brazil (2026).</li>
+          <li><b><a href="https://doi.org/10.5281/zenodo.22035579" rel="noopener">Final scientific report</a></b> of BridgingVALUES / Brazil (2026).</li>
           <li><b>Environmental education policy</b>: contributed to the ANPPEA national network (2015–2019).</li>
         </ul>
       </div>
@@ -453,6 +461,22 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-betw
       root.setAttribute('data-audience',root.getAttribute('data-audience')==='general'?'academic':'general');
     },25000);
   }
+
+  // Publications: show the first five entries, the rest by scrolling inside the list
+  (function(){
+    var box=document.getElementById('pubsScroll'),items=document.querySelectorAll('#pubs li'),hint=document.getElementById('pubsHint'),SHOW=5;
+    if(!box||items.length<=SHOW){if(hint)hint.style.display='none';return}
+    function fit(){
+      var last=items[SHOW-1],bottom=last.offsetTop+last.offsetHeight+1,cap=Math.round(window.innerHeight*0.8);
+      box.style.maxHeight=Math.min(bottom,cap)+'px';
+      hint.textContent=bottom<=cap
+        ?'Showing the first '+SHOW+' of '+items.length+' entries \u2013 scroll the list to see the rest'
+        :'Scroll the list to see all '+items.length+' entries';
+    }
+    fit();
+    window.addEventListener('resize',fit);
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+  })();
 
   // Network graph: every node links to the research themes
   var NS='http://www.w3.org/2000/svg';
